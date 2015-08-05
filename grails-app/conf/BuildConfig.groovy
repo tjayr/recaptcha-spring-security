@@ -10,6 +10,7 @@ grails.project.dependency.resolution = {
         grailsCentral()
         mavenLocal()
         mavenCentral()
+        mavenRepo 'http://repo.grails.org/repo'
     }
 
     dependencies {
@@ -17,12 +18,12 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        build(":tomcat:$grailsVersion",
-              ":release:1.0.0") {
+        build(":tomcat:7.0.54", ":release:2.2.1") {
             export = false
         }
 
-        compile ":recaptcha:0.5.3"
-        compile ":spring-security-core:1.2.7.3"
+        compile ":recaptcha:0.6.9"
+        compile ":spring-security-core:2.0-RC3"
+		
     }
 }
